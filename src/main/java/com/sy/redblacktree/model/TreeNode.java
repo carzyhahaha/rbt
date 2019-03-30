@@ -1,12 +1,9 @@
 package com.sy.redblacktree.model;
 
 import com.sy.redblacktree.constant.RedBlackTreeConst;
-import lombok.Data;
 
-import java.awt.*;
-import java.util.Comparator;
 
-@Data
+
 public class TreeNode<T> {
 
     public TreeNode(T value) {
@@ -40,6 +37,46 @@ public class TreeNode<T> {
     private TreeNode fartherNode;
 
 
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public Integer getColor() {
+        return color;
+    }
+
+    public void setColor(Integer color) {
+        this.color = color;
+    }
+
+    public TreeNode getLeftChildren() {
+        return leftChildren;
+    }
+
+    public void setLeftChildren(TreeNode leftChildren) {
+        this.leftChildren = leftChildren;
+    }
+
+    public TreeNode getRightChildren() {
+        return rightChildren;
+    }
+
+    public void setRightChildren(TreeNode rightChildren) {
+        this.rightChildren = rightChildren;
+    }
+
+    public TreeNode getFartherNode() {
+        return fartherNode;
+    }
+
+    public void setFartherNode(TreeNode fartherNode) {
+        this.fartherNode = fartherNode;
+    }
+
     @Override
     public String toString() {
         return "TreeNode{" +
@@ -50,4 +87,6 @@ public class TreeNode<T> {
                 ", fartherNode=" + (fartherNode == null ? "null" : fartherNode.getValue()) +
                 '}';
     }
+
+
 }
